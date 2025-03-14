@@ -10,10 +10,18 @@ using namespace::std;
 class Car {
 public:
     Car();
-    Car(int id, string type, bool available);
+    Car(int, string);
+    Car(const Car&);
+    virtual void print() const = 0;
+    virtual ~Car();
 
+    int getId() const;
+    string getType() const;
+    bool getAvailable() const;
 
-private:
+    void setAvailability(bool);
+
+protected:
     int id;
     string type;
     bool available;
