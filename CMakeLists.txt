@@ -3,4 +3,6 @@ project(CoenCars)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CoenCars main.cpp Car.cpp Car.h StandardCar.cpp StandardCar.h LuxuryCar.cpp LuxuryCar.h Date.h Date.cpp Time.h Time.cpp)
+add_executable(CoenCars main.cpp Car.cpp Car.h StandardCar.cpp StandardCar.h LuxuryCar.cpp LuxuryCar.h Date.h Date.cpp Time.h Time.cpp
+        Company.cpp
+        Company.h)
