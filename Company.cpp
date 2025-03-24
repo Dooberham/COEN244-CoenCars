@@ -28,6 +28,19 @@ void Company::addCar(Car* car) {
     }
 }
 
+void Company::removeCar(const int& carID) {
+    for (int i = 0; i< numCars; i++) {
+        if (cars[i] -> getId() == carID) {
+            for (int j = i; j < numCars - 1; j++) {
+                cars[j] = cars[j + 1];
+            }
+            numCars--;
+            return;
+        }
+        cout << "Car " << carID << " not found." << endl;
+    }
+}
+
 void Company::listAllCars() const {
     for (int i = 0; i < numCars; i++) {
         cars[i]->print();

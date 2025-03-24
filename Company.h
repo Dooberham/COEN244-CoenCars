@@ -11,7 +11,7 @@ public:
     Company(const Company&);
 
     void addCar(Car *);
-    void removeCar(Car*);
+    void removeCar(const int&);
     bool searchCar(const int&) const;
     void listAllCars() const;
 

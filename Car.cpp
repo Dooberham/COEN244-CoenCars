@@ -11,7 +11,6 @@ Car::Car() {
 }
 
 Car::~Car() {
-
 }
 
 
@@ -43,3 +42,15 @@ void Car::setAvailability(bool available1) {
     available = available1;
 }
 
+void Car::setDates(Date date1, Date date2) {
+    rentalDate = date1;
+    returnDate = date2;
+}
+
+Date Car::getRentalDate() const {
+    return rentalDate;
+}
+
+Date Car::getReturnDate() const {
+    return returnDate;
+}

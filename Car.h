@@ -6,7 +6,7 @@
 #define COENCARS_CAR_H
 #include <iostream>
 using namespace::std;
-
+#include "Date.h"
 class Car {
 public:
     Car();
@@ -21,10 +21,17 @@ public:
 
     void setAvailability(bool);
 
+    void setDates(Date, Date);
+
+    Date getRentalDate() const;
+    Date getReturnDate() const;
+
 protected:
     int id;
     string type;
     bool available;
+    Date rentalDate;
+    Date returnDate;
 
 
 };
