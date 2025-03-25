@@ -10,17 +10,16 @@ Customer::Customer() {
     address = "";
     phone = "";
     numCars = 0;
-    cars = new Car*[1];
 
 }
 
-Customer::Customer(int id1, string name1, string address1, string phone1) {
+Customer::Customer(const int id1, const string &name1, const string &address1, const string &phone1) {
     customerID = id1;
     name = name1;
     address = address1;
     phone = phone1;
     numCars = 0;
-    cars = new Car*[1];
+
 }
 
 Customer::~Customer() {
@@ -47,7 +46,7 @@ int Customer::getLimit() const {
     return limit;
 }
 
-void Customer::rent(Car* car, Date rentalDate, Date returnDate) {
+void Customer::rent(Car* car, const Date &rentalDate, const Date &returnDate) {
     if (numCars < limit) {
         if (car->getAvailability()) {
             cars[numCars] = car;
@@ -55,11 +54,11 @@ void Customer::rent(Car* car, Date rentalDate, Date returnDate) {
             car->setAvailability(false);
             car->setDates(rentalDate, returnDate);
             car->setRenter(this);
-            return;
+
         }
         else {
             cout << "This car is not available." << endl;
-            return;
+
         }
 
     }
@@ -68,7 +67,7 @@ void Customer::rent(Car* car, Date rentalDate, Date returnDate) {
     }
 }
 
-void Customer::returnCar(int id) {
+void Customer::returnCar(const int id) {
     for ( int i = 0; i < numCars; i++) {
         if (id == cars[i] -> getId()) {
             cars[i] -> setAvailability(true);
@@ -85,13 +84,13 @@ void Customer::returnCar(int id) {
 }
 
 void Customer::listCars() const {
-    cout << "Rented Cars:" << endl;
+    cout << "Number of rented cars: " << numCars << endl;
     for (int i = 0; i < numCars; i++) {
         cars[i] -> print();
     }
 }
 
-void Customer::searchCars(int id) const {
+void Customer::searchCars(const int id) const {
     for ( int i = 0; i < numCars; i++) {
         if (id == cars[i] -> getId()) {
 

@@ -10,9 +10,9 @@ using namespace std;
 class Customer {
 public:
     Customer();
-    Customer(int, string, string, string);
+    Customer(int, const string &, const string &, const string &);
     Customer(Customer&);
-    ~Customer();
+    virtual ~Customer();
 
 
     int getId() const;
@@ -21,7 +21,7 @@ public:
     string getPhone() const;
     int getLimit() const;
 
-    void rent(Car*, Date, Date);
+    void rent(Car*, const Date &, const Date &);
     void returnCar(int);
     void listCars() const;
     void searchCars(int) const;

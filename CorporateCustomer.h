@@ -9,7 +9,7 @@ class CorporateCustomer: public Customer {
 public:
     CorporateCustomer();
 
-    CorporateCustomer(int, string, string, string);
+    CorporateCustomer(int, const string &, const string &, const string &);
     CorporateCustomer(CorporateCustomer&);
 
     ~CorporateCustomer();

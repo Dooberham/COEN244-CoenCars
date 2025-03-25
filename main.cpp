@@ -4,31 +4,27 @@
 #include "StandardCar.h"
 #include "Company.h"
 #include "CorporateCustomer.h"
+#include "RegularCustomer.h"
 #include "Date.h"
 int main() {
     Date d1(12,12,12);
     Date d2(6,6,6);
-    LuxuryCar car(12);
-    car.print();
-    car.setAvailability(1);
-    car.print();
-    LuxuryCar car1 = car;
-    car1.print();
-    StandardCar car2;
-    car2.print();
 
-    CorporateCustomer c(123, "Jimnohty Davis","123 street","141421");
-    Company company;
-    company.addCar(&car2);
-    Company company1 = company;
+    LuxuryCar lcar(1001);
+    LuxuryCar lcar1(1002);
+    LuxuryCar lcar2 = lcar;
 
-    car.getRenter();
-    c.rent(&car, d1, d2);
-    cout<<car2.getRenter()->getName() << endl;
-    cout<<car2.getRenter()->getName() << endl;
-    c.returnCar(12);
-    cout<<car2.getRenter()->getName() << endl;
-    cout<<car2.getRenter()->getName() << endl;
+    StandardCar scar(0001);
+    StandardCar scar1(0002);
+    StandardCar scar2 = scar;
+
+    CorporateCustomer cc(123, "Beast philanthropy","Beast street","141421");
+   // CorporateCustomer cc1();
+
+    //RegularCustomer rc(001,"Jimmy Donaldson","12 beast str","51429841");
+    //Company company;
+    //company.addCar(&lcar2);
+    //Company company1 = company;
 
 
 
