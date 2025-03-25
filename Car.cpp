@@ -3,28 +3,33 @@
 //
 
 #include "Car.h"
-
+#include "CorporateCustomer.h"
 Car::Car() {
     id = 0;
-    type = "";
     available = true;
+    renter = nullptr;
+
 }
 
 Car::~Car() {
 }
 
 
-Car::Car(int id1, string type1) {
+Car::Car(int id1) {
     id = id1;
-    type = type1;
     available = true;
+    renter = nullptr;
+
 }
+
 
 Car::Car(const Car& car) {
     id = car.id;
     type = car.type;
     available = car.available;
+    renter = car.renter;
 }
+
 
 int Car::getId() const {
     return id;
@@ -34,7 +39,7 @@ string Car::getType() const {
     return type;
 }
 
-bool Car::getAvailable() const {
+bool Car::getAvailability() const {
     return available;
 }
 
@@ -53,4 +58,17 @@ Date Car::getRentalDate() const {
 
 Date Car::getReturnDate() const {
     return returnDate;
+}
+
+void Car::setRenter(Customer * c) {
+    renter = c;
+}
+
+Customer* Car::getRenter() {
+    if (renter == nullptr) {
+        static CorporateCustomer emptyCustomer; //To prevent memory access violations, an empty customer is initialized at compile time
+        cout <<"this car is not rented to anyone."<< endl;
+        return &emptyCustomer;
+    }
+    return renter;
 }

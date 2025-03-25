@@ -49,11 +49,12 @@ int Customer::getLimit() const {
 
 void Customer::rent(Car* car, Date rentalDate, Date returnDate) {
     if (numCars < limit) {
-        if (car->getAvailable()) {
+        if (car->getAvailability()) {
             cars[numCars] = car;
             numCars++;
             car->setAvailability(false);
             car->setDates(rentalDate, returnDate);
+            car->setRenter(this);
             return;
         }
         else {
@@ -71,7 +72,10 @@ void Customer::returnCar(int id) {
     for ( int i = 0; i < numCars; i++) {
         if (id == cars[i] -> getId()) {
             cars[i] -> setAvailability(true);
+            cars[i] ->setRenter(nullptr);
+            cars[i] ->setDates(Date(), Date());
             cars[i] = cars[numCars-1];
+
             numCars--;
             return;
 

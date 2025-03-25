@@ -9,11 +9,12 @@ class StandardCar : public Car {
 public:
 
     StandardCar();
-    StandardCar(int, string);
+    StandardCar(int);
     StandardCar(const StandardCar&);
 
 
     virtual void print() const;
     virtual ~StandardCar();
+    virtual StandardCar* copy() const;
 };
 #endif //COENCARS_STANDARDCAR_H

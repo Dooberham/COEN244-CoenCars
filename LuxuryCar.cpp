@@ -6,9 +6,10 @@
 #include <iostream>
 
 LuxuryCar::LuxuryCar():Car() {
-
+    type = "Luxury";
 }
-LuxuryCar::LuxuryCar(int id1, string type1): Car(id1, type1){
+LuxuryCar::LuxuryCar(int id1): Car(id1){
+    type = "Luxury";
 
 }
 
@@ -25,3 +26,6 @@ void LuxuryCar::print() const {
     cout << "Availability: " << available << endl;
 }
 
+LuxuryCar* LuxuryCar::copy() const {
+    return new LuxuryCar(*this);
+}

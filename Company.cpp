@@ -10,6 +10,14 @@ Company::Company() {
 
 }
 
+Company::Company(const Company& c) {
+    numCars = c.numCars;
+    cars = new Car*[maxCars];
+    for (int i=0; i < numCars; i++) {
+        cars[i] = c.cars[i]->copy();
+    }
+}
+
 Company::~Company() {
     delete[] cars;
 }

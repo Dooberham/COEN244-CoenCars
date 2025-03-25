@@ -7,4 +7,8 @@ add_executable(CoenCars main.cpp Car.cpp Car.h StandardCar.cpp StandardCar.h Lux
         Company.cpp
         Company.h
         Customer.cpp
-        Customer.h)
+        Customer.h
+        CorporateCustomer.cpp
+        CorporateCustomer.h
+        RegularCustomer.cpp
+        RegularCustomer.h)

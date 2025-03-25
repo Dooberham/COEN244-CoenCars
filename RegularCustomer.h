@@ -1,0 +1,8 @@
+//
+// Created by Niall Cunningham on 2025-03-24.
+//
+
+#ifndef COENCARS_REGULARCUSTOMER_H
+#define COENCARS_REGULARCUSTOMER_H
+
+#endif //COENCARS_REGULARCUSTOMER_H

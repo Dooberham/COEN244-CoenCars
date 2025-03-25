@@ -26,7 +26,7 @@ public:
     void listCars() const;
     void searchCars(int) const;
 
-    void print();
+    virtual void print() const = 0;
 
 
 protected:
@@ -34,7 +34,7 @@ protected:
     string name;
     string address;
     string phone;
-    int limit =1;
+    int limit;
     int numCars;
     Car **cars;
 };

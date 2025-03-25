@@ -8,11 +8,11 @@
 class LuxuryCar : public Car {
     public:
     LuxuryCar();
-    LuxuryCar(int, string);
+    LuxuryCar(int);
     LuxuryCar(const LuxuryCar&);
     virtual void print() const;
     virtual ~LuxuryCar();
-
+    virtual LuxuryCar *copy() const;
 
 
 
