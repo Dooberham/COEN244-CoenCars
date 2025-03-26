@@ -4,25 +4,25 @@
 
 #include "StandardCar.h"
 
-StandardCar::StandardCar():Car() {
+StandardCar::StandardCar():Car() { // default constructor
+    type = "Standard"; // set type to Standard
+}
+StandardCar::StandardCar(int id1): Car(id1){ // constructor with id
     type = "Standard";
 }
-StandardCar::StandardCar(int id1): Car(id1){
-    type = "Standard";
-}
 
-StandardCar::StandardCar(const StandardCar& StandardCar):Car(StandardCar) {
+StandardCar::StandardCar(const StandardCar& StandardCar):Car(StandardCar) { //copy constructor
 
 }
 
-StandardCar::~StandardCar() {
+StandardCar::~StandardCar() { // destructor, nothing to do
     
 }
-void StandardCar::print() const {
+void StandardCar::print() const { // print function
     cout << "ID: " << id << endl;
     cout << "Type: " << type << endl;
     cout << "Availability: " << available << endl;
 }
-StandardCar* StandardCar::copy() const {
-    return new StandardCar(*this);
+StandardCar* StandardCar::copy() const { // copy function
+    return new StandardCar(*this); // return a new StandardCar object
 }

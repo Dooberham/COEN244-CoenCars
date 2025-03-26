@@ -7,14 +7,14 @@
 #include "Customer.h"
 class RegularCustomer: public Customer {
 public:
-    RegularCustomer();
+    RegularCustomer(); // default constructor
 
-    RegularCustomer(int, const string &, const string &, const string &);
-    RegularCustomer(const RegularCustomer&);
+    RegularCustomer(int, const string &, const string &, const string &); // constructor with parameters
+    RegularCustomer(const RegularCustomer&); // copy constructor
 
-    ~RegularCustomer();
+    ~RegularCustomer(); // destructor
 
-    virtual void print() const;
+    virtual void print() const; // print function
 
 };
 #endif //COENCARS_REGULARCUSTOMER_H

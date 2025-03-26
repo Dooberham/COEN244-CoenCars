@@ -5,27 +5,27 @@
 #include "LuxuryCar.h"
 #include <iostream>
 
-LuxuryCar::LuxuryCar():Car() {
-    type = "Luxury";
+LuxuryCar::LuxuryCar():Car() { // default constructor
+    type = "Luxury";  // set type to Luxury
 }
 LuxuryCar::LuxuryCar(int id1): Car(id1){
     type = "Luxury";
 
 }
 
-LuxuryCar::LuxuryCar(const LuxuryCar& luxurycar):Car(luxurycar) {
+LuxuryCar::LuxuryCar(const LuxuryCar& luxurycar):Car(luxurycar) { // copy constructor, initialized in base class
 
 }
 
-LuxuryCar::~LuxuryCar() {
+LuxuryCar::~LuxuryCar() { //Default destructor
 
 }
-void LuxuryCar::print() const {
+void LuxuryCar::print() const { // print function
     cout << "ID: " << id << endl;
     cout << "Type: " << type << endl;
     cout << "Availability: " << available << endl;
 }
 
-LuxuryCar* LuxuryCar::copy() const {
-    return new LuxuryCar(*this);
+LuxuryCar* LuxuryCar::copy() const { // copy function
+    return new LuxuryCar(*this); // return a new object
 }

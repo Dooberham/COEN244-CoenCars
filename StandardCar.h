@@ -8,13 +8,13 @@
 class StandardCar : public Car {
 public:
 
-    StandardCar();
-    StandardCar(int);
-    StandardCar(const StandardCar&);
+    StandardCar(); // default constructor
+    StandardCar(int); // constructor with id
+    StandardCar(const StandardCar&); // copy constructor
 
 
-    virtual void print() const;
-    virtual ~StandardCar();
-    virtual StandardCar* copy() const;
+    virtual void print() const; // print function
+    virtual ~StandardCar(); // destructor
+    virtual StandardCar* copy() const; // copy function
 };
 #endif //COENCARS_STANDARDCAR_H

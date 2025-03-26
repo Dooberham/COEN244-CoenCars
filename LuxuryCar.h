@@ -7,12 +7,12 @@
 #include "Car.h"
 class LuxuryCar : public Car {
     public:
-    LuxuryCar();
-    LuxuryCar(int);
-    LuxuryCar(const LuxuryCar&);
-    virtual void print() const;
-    virtual ~LuxuryCar();
-    virtual LuxuryCar *copy() const;
+    LuxuryCar(); // default constructor
+    LuxuryCar(int); // constructor with id
+    LuxuryCar(const LuxuryCar&); // copy constructor
+    virtual void print() const; // print function
+    virtual ~LuxuryCar(); // destructor
+    virtual LuxuryCar *copy() const; // copy function
 
 
 

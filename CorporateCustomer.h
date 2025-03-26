@@ -5,16 +5,16 @@
 #ifndef COENCARS_CORPORATECUSTOMER_H
 #define COENCARS_CORPORATECUSTOMER_H
 #include "Customer.h"
-class CorporateCustomer: public Customer {
+class CorporateCustomer: public Customer { // Inherits from Customer
 public:
-    CorporateCustomer();
+    CorporateCustomer(); // Default constructor
 
-    CorporateCustomer(int, const string &, const string &, const string &);
-    CorporateCustomer(const CorporateCustomer&);
+    CorporateCustomer(int, const string &, const string &, const string &); // Constructor with parameters
+    CorporateCustomer(const CorporateCustomer&); // Copy constructor
 
-    ~CorporateCustomer();
+    ~CorporateCustomer(); // Destructor
 
-    virtual void print() const;
+    virtual void print() const; // Print function
 
 };
 #endif //COENCARS_CORPORATECUSTOMER_H

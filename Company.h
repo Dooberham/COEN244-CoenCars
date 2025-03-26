@@ -7,21 +7,21 @@
 #include "Car.h"
 class Company {
 public:
-    Company();
-    Company(const Company&);
+    Company(); // Default constructor
+    Company(const Company&); // Copy constructor
 
-    void addCar(Car *);
-    void removeCar(const int&);
-    bool searchCar(const int&) const;
-    void listAllCars() const;
+    void addCar(Car *); // Add a car to the company
+    void removeCar(const int&); // Remove a car from the company
+    bool searchCar(const int&) const; // Search for a car by ID
+    void listAllCars() const; // List all cars in the company
 
-    ~Company();
+    ~Company(); // Destructor
 
 
 private:
-    Car** cars;
-    int numCars;
-    int maxCars = 1000;
+    Car** cars; // Array of pointers to Car objects
+    int numCars; // Number of cars in the company
+    int maxCars = 1000; // Maximum number of cars
 
 
 
