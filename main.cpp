@@ -19,9 +19,22 @@ int main() {
     StandardCar scar2 = scar;
 
     CorporateCustomer cc(123, "Beast philanthropy","Beast street","141421");
-   // CorporateCustomer cc1();
+    CorporateCustomer cc1();
+    cc.rent(&lcar,d1, d2);
+    cc.rent(&lcar1,d1,d2);
+    CorporateCustomer cc2 = cc;
+    lcar.setDates(Date(), Date());
+    cc.listCars();
+    cc2.listCars();
 
-    //RegularCustomer rc(001,"Jimmy Donaldson","12 beast str","51429841");
+    cout <<&cc<<endl;
+    cout <<&cc2;
+
+
+    RegularCustomer rc(001,"Jimmy Donaldson","12 beast str","51429841");
+    RegularCustomer rc1();
+    RegularCustomer rc2 = rc;
+
     //Company company;
     //company.addCar(&lcar2);
     //Company company1 = company;

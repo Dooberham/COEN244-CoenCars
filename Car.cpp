@@ -28,6 +28,8 @@ Car::Car(const Car& car) {
     type = car.type;
     available = car.available;
     renter = car.renter;
+    rentalDate = car.rentalDate;
+    returnDate = car.returnDate;
 }
 
 

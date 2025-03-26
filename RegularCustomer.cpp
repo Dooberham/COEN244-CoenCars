@@ -14,7 +14,13 @@ RegularCustomer::RegularCustomer(const int id1, const string &name1, const strin
     cars = new Car*[limit];
 }
 
-RegularCustomer::RegularCustomer(RegularCustomer&): Customer() {}
+RegularCustomer::RegularCustomer(const RegularCustomer& c): Customer(c) {
+    cars = new Car*[limit];
+    for (int i = 0; i < numCars; i++) {
+        cars[i] = c.cars[i]->copy();
+        cars[i] ->setRenter(this);
+    }
+}
 
 void RegularCustomer::print() const {
     cout << "ID: " << customerID;

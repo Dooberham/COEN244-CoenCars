@@ -10,7 +10,7 @@ public:
     RegularCustomer();
 
     RegularCustomer(int, const string &, const string &, const string &);
-    RegularCustomer(RegularCustomer&);
+    RegularCustomer(const RegularCustomer&);
 
     ~RegularCustomer();
 

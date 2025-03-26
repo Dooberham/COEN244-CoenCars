@@ -11,7 +11,7 @@ class Customer {
 public:
     Customer();
     Customer(int, const string &, const string &, const string &);
-    Customer(Customer&);
+    Customer(const Customer&);
     virtual ~Customer();
 
 

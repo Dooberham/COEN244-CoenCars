@@ -14,7 +14,13 @@ CorporateCustomer::CorporateCustomer(const int id1, const string &name1, const s
     cars = new Car*[limit];
 }
 
-CorporateCustomer::CorporateCustomer(CorporateCustomer&): Customer() {}
+CorporateCustomer::CorporateCustomer(const CorporateCustomer& c): Customer(c) {
+    cars = new Car*[limit];
+    for (int i = 0; i < numCars; i++) {
+        cars[i] = c.cars[i]->copy();
+        cars[i] ->setRenter(this);
+    }
+}
 
 void CorporateCustomer::print() const {
     cout << "ID: " << customerID;

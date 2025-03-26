@@ -21,6 +21,15 @@ Customer::Customer(const int id1, const string &name1, const string &address1, c
     numCars = 0;
 
 }
+Customer::Customer(const Customer & c) {
+    customerID = c.customerID;
+    name = c.name;
+    address = c.address;
+    phone = c.phone;
+    numCars = c.numCars;
+    limit = c.limit;
+
+}
 
 Customer::~Customer() {
     delete[] cars;
@@ -87,6 +96,7 @@ void Customer::listCars() const {
     cout << "Number of rented cars: " << numCars << endl;
     for (int i = 0; i < numCars; i++) {
         cars[i] -> print();
+        cout <<cars[i] -> getRenter()<<endl;
     }
 }
 

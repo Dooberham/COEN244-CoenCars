@@ -10,7 +10,7 @@ public:
     CorporateCustomer();
 
     CorporateCustomer(int, const string &, const string &, const string &);
-    CorporateCustomer(CorporateCustomer&);
+    CorporateCustomer(const CorporateCustomer&);
 
     ~CorporateCustomer();
 
