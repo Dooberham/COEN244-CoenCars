@@ -11,7 +11,7 @@ int main() {
     Date d1(12,12,12);
     Date d2(6,6,6);
 
-    Company company;
+    Company* company = new Company();
 
     LuxuryCar lcar(1001);
     LuxuryCar lcar1(1002);
@@ -21,7 +21,7 @@ int main() {
     StandardCar scar1(0002);
     StandardCar scar2 = scar;
 
-    company.addCar(&lcar);company.addCar(&lcar1);company.addCar(&scar);company.addCar(&scar1);
+    company->addCar(&lcar);company->addCar(&lcar1);company->addCar(&scar);company->addCar(&scar1);
 
     CorporateCustomer cc(123, "Beast philanthropy","Beast street","141421");
     CorporateCustomer cc1();
@@ -38,7 +38,7 @@ int main() {
 
 
 
-
+    delete company;
 
 
     return 0;
