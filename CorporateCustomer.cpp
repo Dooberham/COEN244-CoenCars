@@ -1,7 +1,8 @@
 //
 // Created by Niall Cunningham on 2025-03-24.
 //
-
+//Niall Cunningham
+//40227080
 #include "CorporateCustomer.h"
 
 CorporateCustomer::CorporateCustomer():Customer() {
@@ -23,10 +24,10 @@ CorporateCustomer::CorporateCustomer(const CorporateCustomer& c): Customer(c) {
 }
 
 void CorporateCustomer::print() const {  // Print function
-    cout << "ID: " << customerID;
-    cout << "Name: " << name;
-    cout << "Address: " << address;
-    cout << "Phone: " << phone;
+    cout << "ID: " << customerID << endl;
+    cout << "Name: " << name << endl;
+    cout << "Address: " << address << endl;
+    cout << "Phone: " << phone << endl;
 
 }
 

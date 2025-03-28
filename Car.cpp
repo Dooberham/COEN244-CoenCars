@@ -4,6 +4,8 @@
 
 #include "Car.h"
 #include "CorporateCustomer.h"
+//Niall Cunningham
+//40227080
 Car::Car() {
     id = 0; // Default ID
     available = true; // Default to available

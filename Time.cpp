@@ -4,6 +4,8 @@
 
 #include "Time.h"
 #include <iostream>
+//Niall Cunningham
+//40227080
 using namespace std;
 Time::Time() {
     hour = 0;

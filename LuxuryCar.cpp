@@ -1,7 +1,8 @@
 //
 // Created by Niall Cunningham on 2025-03-11.
 //
-
+//Niall Cunningham
+//40227080
 #include "LuxuryCar.h"
 #include <iostream>
 
@@ -23,7 +24,7 @@ LuxuryCar::~LuxuryCar() { //Default destructor
 void LuxuryCar::print() const { // print function
     cout << "ID: " << id << endl;
     cout << "Type: " << type << endl;
-    cout << "Availability: " << available << endl;
+    cout << "Availability: " << available << endl << endl;
 }
 
 LuxuryCar* LuxuryCar::copy() const { // copy function

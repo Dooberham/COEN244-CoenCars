@@ -5,6 +5,8 @@
 #ifndef COENCARS_LUXURYCAR_H
 #define COENCARS_LUXURYCAR_H
 #include "Car.h"
+//Niall Cunningham
+//40227080
 class LuxuryCar : public Car {
     public:
     LuxuryCar(); // default constructor

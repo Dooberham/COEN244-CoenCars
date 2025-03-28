@@ -1,7 +1,8 @@
 //
 // Created by Niall Cunningham on 2025-02-15.
 //
-
+//Niall Cunningham
+//40227080
 #include "Date.h"
 // Class composition: Class Date uses an object of class Time.
 

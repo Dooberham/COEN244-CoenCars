@@ -1,7 +1,8 @@
 //
 // Created by Niall Cunningham on 2025-03-24.
 //
-
+//Niall Cunningham
+//40227080
 #ifndef COENCARS_CORPORATECUSTOMER_H
 #define COENCARS_CORPORATECUSTOMER_H
 #include "Customer.h"

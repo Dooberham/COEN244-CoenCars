@@ -1,7 +1,8 @@
 //
 // Created by Niall Cunningham on 2025-03-14.
 //
-
+//Niall Cunningham
+//40227080
 #ifndef COMPANY_H
 #define COMPANY_H
 #include "Car.h"

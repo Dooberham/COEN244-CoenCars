@@ -1,7 +1,8 @@
 //
 // Created by Niall Cunningham on 2025-03-14.
 //
-
+//Niall Cunningham
+//40227080
 #include "Company.h"
 
 Company::Company() { // Default constructor
@@ -47,13 +48,16 @@ void Company::removeCar(const int& carID) { // Remove a car from the company
                 cars[j] = cars[j + 1];
             }
             numCars--;
+            cout <<"Car " << carID << " removed." << endl;
             return;
         }
-        cout << "Car " << carID << " not found." << endl;
+
     }
+    cout << "Car " << carID << " not found." << endl;
 }
 
 void Company::listAllCars() const { // List all cars in the company
+    cout <<"Company has " << numCars << " cars." << endl<<endl;
     for (int i = 0; i < numCars; i++) {
         cars[i]->print();
     }

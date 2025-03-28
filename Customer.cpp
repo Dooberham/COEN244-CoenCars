@@ -1,7 +1,8 @@
 //
 // Created by Niall Cunningham on 2025-03-21.
 //
-
+//Niall Cunningham
+//40227080
 #include "Customer.h"
 
 Customer::Customer() { // Default constructor
